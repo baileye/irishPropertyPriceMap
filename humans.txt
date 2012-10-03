@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Eoin Bailey -- Developer -- @eoinbailey
 
 # THANKS
 
-    <name>
+    Trinity College Dublin
 
 # TECHNOLOGY COLOPHON
 
