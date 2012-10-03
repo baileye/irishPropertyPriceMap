@@ -223,11 +223,23 @@ function initializeMap() {
 	var mapOptions = {
   	zoom: 7,
   	center: new google.maps.LatLng(53.4656,-7.7691),
-  	mapTypeId: google.maps.MapTypeId.TERRAIN,
+  	mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, "OSM", google.maps.MapTypeId.TERRAIN, google.maps.MapTypeId.HYBRID]
+    },
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
     minZoom: 7,
     maxZoom: 17,
 	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);	
+
+  map.mapTypes.set("OSM", new google.maps.ImageMapType({
+      getTileUrl: function(coord, zoom) {
+          return "http://tile.openstreetmap.org/" + zoom + "/" + coord.x + "/" + coord.y + ".png";
+      },
+      tileSize: new google.maps.Size(256, 256),
+      name: "Open Street Map",
+      maxZoom: 18
+  }));
 
   markerClusterer();
 }

@@ -87,7 +87,7 @@
                   <p><img class="multipleMarkers" src="img/m3.png" title="Cluster Marker"/> Multiple sales</p>
                 </div>
                 <div class="span4">  
-                  <p>Total transactions on map: <span class="totalTransactionsShown"></span></p>
+                  <p>Transactions loaded: <span class="totalTransactionsShown"></span></p>
                 </div>
               </div>
 
