@@ -11,7 +11,7 @@ def yahooGeoCode(address)
 
 	#  YAHOO
 	# http://developer.yahoo.com/geo/placefinder/guide/requests.html#flags-parameter
-	apiYahoo = 'http://where.yahooapis.com/geocode?appid=a6lZNJ3V34GEW6IYy6np6evEaCTycIoCDpN5BpPc48UIa44BVLUPyO6_E5Li5FKf2aTnN4XTDGAEfb9MJDy688Bqbt_Rdr8&country=IE&flags=CJ&count=1&q='
+	apiYahoo = 'http://where.yahooapis.com/geocode?appid=<YAHOO API KEY>&country=IE&flags=CJ&count=1&q='
 
 	begin
 	  data = Net::HTTP.get_response(URI.parse(apiYahoo+address)).body
