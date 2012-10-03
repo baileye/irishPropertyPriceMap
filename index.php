@@ -141,7 +141,7 @@
                   <p>This site utilises the <a href="http://www.propertypriceregister.ie/">Property Register of Ireland</a> dataset to build a map showing the sales of property in Ireland starting in January 2010 and up to mid-August 2012. The number of transactions is ~52,000, but a little under 2,000 addresses failed to geocode and aren't shown.</p>
                   <p><strong>Disclaimer:</strong> All addresses have been automatically geoCoded using either the <a href="http://www.mapquest.com/">MapQuest</a> Open Geocoding Service that utlises <a href="http://www.openstreetmap.org/">Open Street Map</a> information, or addresses have been geocoded with the <a href="http://yahoo.com">Yahoo Geocoding Service</a>. Errors are a certainty, this site is for information purposes only. Clicking a marker brings up the info on the sale, the address is a link that will geoCode the address with Google Maps, that will often give a better result than shown on this map.</p>
                   <p>To find specific properties, try <a href="http://karlmonaghan.com/property/">Karl Monaghan's mapping of the property price register</a>.</p>
-                  <p>Hosted by <a href="http://www.tcd.ie">Trinity College Dublin</a>
+                  <p>Hosted by <a href="http://kdeg.cs.tcd.ie">Knowledge and Data Engineering Group</a> in <a href="http://www.tcd.ie">Trinity College Dublin</a>
                   </div>
                 </div>
 

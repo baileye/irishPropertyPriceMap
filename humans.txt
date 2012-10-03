@@ -6,7 +6,7 @@
     Eoin Bailey -- Developer -- @eoinbailey
 
 # THANKS
-
+		KDEG - Knowledge and Data Engineering Group
     Trinity College Dublin
 
 # TECHNOLOGY COLOPHON

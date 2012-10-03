@@ -66,8 +66,7 @@ CSV.foreach("propertyPriceList.csv", :quote_char => '"', :col_sep =>',', :row_se
 	if (row[0].nil?)
 		print "No date found, skip this line -- "+ line.to_s
 	else
-		# convert DATE -- dd/mm/yyyy -> 'YYYY-MM-DD'
-		# TODO: UPDATE DATE FIELD!!!! ARGH! IT IS ACTUALLY mm/dd/yyyy
+		# convert DATE -- mm/dd/yyyy -> 'YYYY-MM-DD'
 		date = row[0].split('/')
 		year = date[2]
 		month = date[0]
@@ -90,12 +89,6 @@ CSV.foreach("propertyPriceList.csv", :quote_char => '"', :col_sep =>',', :row_se
 
 		results = client.query('SELECT id, lat, lng FROM transactions WHERE address = "'+row[1].to_s+'" AND county = "'+row[3].to_s+'";')
 
-		# THIS WAS FOR UPDATING THE DATE I ENTERED INCORRECTLY IN THE DATABASE FIRST TIME AROUND
-		# results = client.query('SELECT id FROM transactions WHERE address = "'+row[1]+'";')		
-		# if results.count == 1
-		# 	client.query('UPDATE transactions SET date = "'+date+'" WHERE address ="'+row[1]+'";')
-		# end
-		
 		if results.count == 0
 			# There is no match for the address in the database, try to geocode this address
 
