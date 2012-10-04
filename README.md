@@ -13,3 +13,7 @@ Visit the live site: [http://kdeg.cs.tcd.ie/propertyPriceMap/](http://kdeg.cs.tc
 ## Thanks 
 
 Site hosted by [Knowledge and Data Engineering Group](http://kdeg.cs.tcd.ie), in [Trinity College Dublin](http://www.tcd.ie)
+
+# Set Up Your Own Version
+
+You'll need a [Google maps API key](https://developers.google.com/maps/signup), change the key in the script loading maps at the top of the index.php page. That's pretty much it. Your web server needs [PHP](http://www.php.net/). The data is loaded from static JSON files in /data.
