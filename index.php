@@ -21,21 +21,9 @@
   <link rel="stylesheet" href="css/main.css">
 
   <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyDHIaLS6tpFvPYXssTyb8yO19Q0b-i6cb8&sensor=false&region=IE"></script>
+  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHIaLS6tpFvPYXssTyb8yO19Q0b-i6cb8&sensor=false&region=IE"></script> -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAg9s3a2yhodOrlC8YECa5q0Fc3R8Yw554&sensor=false&region=IE"></script>
   
-  <script type="text/javascript">
-    var data = 
-    <?php
-      include 'db/countyCount.php';
-      loadData();
-    ?>
-    ;
-    var resales = 
-    <?php
-    loadResales();
-    ?>
-    ;
-  </script>
 </head>
 <body>
         <!--[if lt IE 7]>
@@ -165,6 +153,11 @@
 
               <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
               <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+              <script type="text/javascript">
+                var data = $.parseJSON(<?php echo json_encode(file_get_contents('data/transactions.json')); ?>);
+                var resales = $.parseJSON(<?php echo json_encode(file_get_contents('data/resales.json')); ?>);
+              </script>
+
 
               <script src="js/vendor/bootstrap.min.js"></script>
 
